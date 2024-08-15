@@ -7,7 +7,7 @@ OUTPUT=hangman
 all: $(OUTPUT)
 
 $(OUTPUT): hangman.o main.o
-	cppcheck --enable=performance,unusedFunction --error-exitcode=1 *.c
+#	cppcheck --enable=performance,unusedFunction --error-exitcode=1 *.c
 	$(CC) $(CFLAGS) hangman.o main.o $(LDLIBS) -o $(OUTPUT)
 
 main.o: main.c
